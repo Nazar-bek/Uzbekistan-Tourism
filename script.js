@@ -4,8 +4,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const targetElement = document.querySelector(this.getAttribute('href'));
         window.scrollTo({
-            top: targetElement.offsetTop - 60, // Adjust scroll position to account for sticky header
+            top: targetElement.offsetTop - 60, 
             behavior: 'smooth'
         });
     });addEventListener('scroll', lazyLoad);
 window.addEventListener('load', lazyLoad);
+})
